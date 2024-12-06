@@ -2,33 +2,35 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "items.cpp"
 
 using namespace std;
 
-string searchItem;
-
-void setSearchItem(string i)
-{
-	searchItem = i;
-}
-
-string getSearchItem()
-{
-	return searchItem;
-}
 
 class search 
+
 {
-public:
+public: 
+
+	string searchItem;
+
+	void setSearchItem(string i)
+	{
+		searchItem = i;
+	}
+
+	string getSearchItem()
+	{
+		return searchItem;
+	}
 
 
-void searchItem()
+
+void searchItem(string search)
 {
-	ifstream myFile("file.txt");
+	ifstream myFile("items.txt");
 
 	string line;
-
-	string searchString = getSearchItem();
 
 	int lineNumber = 0;
 
@@ -39,16 +41,16 @@ void searchItem()
 		cout << "File is not opened";
 	}
 
-		while (getLine(myFile,line))
+		while (getline(myFile, line))
 		{
 				lineNumber++;
-				if (line.find(searchString))
+				if (line.find(search))
 				{
-					cout << "Found \"" << searchString << "\" at line " << lineNumber << line ;
+					cout << "Found \"" << search << "\" at line " << lineNumber << line ;
 				}
 				else if (!found)
 				{
-					cout << "\"" << searchString << "\" not found in the file" ;
+					cout << "\"" << search << "\" not found in the file" ;
 				}
 				else
 				{
@@ -62,14 +64,49 @@ void searchItem()
 } //end of function
 };//end of class
 
+class primaryOperations
+{
+	
+	void addItem(string i, string ti, string ty, bool a = true)
+	{	
+		ofstream myFile("items.txt");
+		item itemKey;
+		myFile << "ID : \ " << itemKey.getID() << "Type : \ " << itemKey.getType() << "Title : \ " << itemKey.getTitle() << "Available : \ " << itemKey.getAvailability();
+		
+	}
+
+	void removeItem()
+	{
+		ofstream myFile("items.txt");
+	}
+
+	void checkIn()
+	{
+		ofstream myFile("activity.txt");
+	}
+
+	void checkOut() 
+	{
+		ofstream myFile("activity.txt");
+	}
+
+	void report()
+	{
+		ofstream myFile("activity.txt");
+	}
+
+
+
+};
 
 
 int main()
 {
 	string item;
+	search searchKey;
 	cout << "Please enter the string that you would like to search." ;
 	cin >> item ;
-	setSearchItem(item);
+	searchKey.searchItem(item);
 	return 0;
 }
 
