@@ -1,19 +1,19 @@
 ﻿  operations.cpp
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(28,7): error C2365: 'Operations::searchItem': redefinition; previous definition was 'data member'
-      C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(12,19):
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(33,7): error C2365: 'Operations::searchItem': redefinition; previous definition was 'data member'
+      C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(17,8):
       see declaration of 'Operations::searchItem'
   
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(30,18): error C2059: syntax error: 'string'
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(38,2): error C2059: syntax error: 'if'
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(39,2): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(43,3): error C2059: syntax error: 'while'
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(44,3): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(65,2): error C2628: 'Operations' followed by 'void' is illegal (did you forget a ';'?)
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(68,3): error C2065: 'vec': undeclared identifier
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(94,3): error C2065: 'checkInCount': undeclared identifier
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(101,3): error C2065: 'checkOutCount': undeclared identifier
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(111,24): error C2065: 'vec': undeclared identifier
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(116,19): error C2065: 'vec': undeclared identifier
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(120,25): error C2065: 'vec': undeclared identifier
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(134,1): error C2059: syntax error: '}'
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(134,1): error C2143: syntax error: missing ';' before '}'
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(36,19): error C2059: syntax error: 'string'
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(44,3): error C2059: syntax error: 'if'
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(45,3): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(49,3): error C2059: syntax error: 'while'
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(50,3): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(71,2): error C2628: 'Operations' followed by 'void' is illegal (did you forget a ';'?)
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(74,3): error C2065: 'vec': undeclared identifier
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(101,3): error C2065: 'checkInCount': undeclared identifier
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(108,3): error C2065: 'checkOutCount': undeclared identifier
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(118,23): error C2065: 'vec': undeclared identifier
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(123,19): error C2065: 'vec': undeclared identifier
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(127,25): error C2065: 'vec': undeclared identifier
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(141,1): error C2059: syntax error: '}'
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(141,1): error C2143: syntax error: missing ';' before '}'

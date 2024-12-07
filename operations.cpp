@@ -10,12 +10,14 @@ using namespace std;
 class Operations
 {
 
+
 public:
+
 vector <string> vec;
 string searchItem;
- int checkInCount = 0, checkOutCount = 0;
+int checkInCount = 0;
+int checkOutCount = 0;
 	  
-
 
 	//set and get methods for the search item or the removed item
 	void setSearchItem(string i)
@@ -29,6 +31,7 @@ string searchItem;
 	}
 
 	void searchItem(string search) 
+
 	{
 		ifstream myFile("items.txt");
 
@@ -65,7 +68,7 @@ string searchItem;
 	} //end of function
 
 		//Adds an item to inventory
-	void addItem(string id, string title, string type, bool availability = true)
+	void addItem(string id, string title, string type, bool availability)
 	{
 		ofstream myFile("items.txt");
 		vec.push_back(id);
@@ -90,6 +93,7 @@ string searchItem;
 	}
 
 	//checks in an item ie. when someone brings back an item
+	
 	void checkIn(string firstName, string lastName, string accountID, string type, string itemID, string title)
 	{
 		ofstream myFile("checkIn.txt");
@@ -136,4 +140,3 @@ string searchItem;
 	}
 };
 	
-
