@@ -22,14 +22,14 @@ public:
 		searchItem = i;
 	}
 
-	string getSearchItem()
+	string getSearchItem() const
 	{
 		return searchItem;
 	}
 
 
 
-void searchItem(string search)
+	void searchItem(string search) const
 {
 	ifstream myFile("items.txt");
 
@@ -70,7 +70,6 @@ void searchItem(string search)
 	void addItem(string id, string title, string type, bool availability = true) 
 	{	
 		ofstream myFile("items.txt");
-		item itemKey; //this has an error because of the input from jewel's file
 		myFile << "ID : \ " << id  << "Type : \ " << type << "Title : \ " << title << "Available : \ " << availability;
 		
 	}
@@ -111,14 +110,4 @@ void searchItem(string search)
 
 	}
 };
-
-int main()
-{
-	string item;
-	search searchKey; //I need to fix the object reference
-	cout << "Please enter the string that you would like to search." ;
-	cin >> item ;
-	searchKey.searchItem(item);
-	return 0;
-}
 
