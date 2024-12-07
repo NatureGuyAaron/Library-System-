@@ -1,30 +1,29 @@
 ﻿  operations.cpp
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(29,6): error C2365: 'search::searchItem': redefinition; previous definition was 'data member'
-      C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(15,9):
-      see declaration of 'search::searchItem'
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(33,7): error C2365: 'Operations::searchItem': redefinition; previous definition was 'data member'
+      C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(17,19):
+      see declaration of 'Operations::searchItem'
   
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(31,18): error C2059: syntax error: 'string'
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(39,2): error C2059: syntax error: 'if'
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(40,2): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(44,3): error C2059: syntax error: 'while'
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(45,3): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(62,3): error C3927: '->': trailing return type is not allowed after a non-function declarator
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(62,9): error C3484: syntax error: expected '->' before the return type
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(62,10): error C3613: missing return type after '->' ('int' assumed)
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(62,10): error C3646: 'close': unknown override specifier
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(62,15): error C2059: syntax error: '('
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(62,17): error C2238: unexpected token(s) preceding ';'
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(65,1): error C2059: syntax error: '}'
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(65,1): error C2143: syntax error: missing ';' before '}'
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(74,13): warning C4129: ' ': unrecognized character escape sequence
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(74,45): warning C4129: ' ': unrecognized character escape sequence
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(74,81): warning C4129: ' ': unrecognized character escape sequence
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(74,119): warning C4129: ' ': unrecognized character escape sequence
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(73,3): error C2065: 'item': undeclared identifier
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(73,8): error C2146: syntax error: missing ';' before identifier 'itemKey'
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(73,8): error C2065: 'itemKey': undeclared identifier
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(74,26): error C2065: 'itemKey': undeclared identifier
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(74,60): error C2065: 'itemKey': undeclared identifier
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(74,97): error C2065: 'itemKey': undeclared identifier
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(74,139): error C2065: 'itemKey': undeclared identifier
-C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(119,11): error C2064: term does not evaluate to a function taking 1 arguments
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(35,18): error C2059: syntax error: 'string'
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(43,2): error C2059: syntax error: 'if'
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(44,2): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(48,3): error C2059: syntax error: 'while'
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(49,3): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(64,3): error C3927: '->': trailing return type is not allowed after a non-function declarator
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(64,9): error C3484: syntax error: expected '->' before the return type
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(64,10): error C3613: missing return type after '->' ('int' assumed)
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(64,10): error C3646: 'close': unknown override specifier
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(64,15): error C2059: syntax error: '('
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(64,17): error C2238: unexpected token(s) preceding ';'
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(69,2): error C2628: 'Operations' followed by 'void' is illegal (did you forget a ';'?)
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(72,3): error C2065: 'vec': undeclared identifier
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(73,13): warning C4129: ' ': unrecognized character escape sequence
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(73,33): warning C4129: ' ': unrecognized character escape sequence
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(73,56): warning C4129: ' ': unrecognized character escape sequence
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(73,81): warning C4129: ' ': unrecognized character escape sequence
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(98,3): error C2065: 'checkInCount': undeclared identifier
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(105,3): error C2065: 'checkOutCount': undeclared identifier
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(115,24): error C2065: 'vec': undeclared identifier
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(120,19): error C2065: 'vec': undeclared identifier
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(124,25): error C2065: 'vec': undeclared identifier
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(138,1): error C2059: syntax error: '}'
+C:\Users\Bernisha Moreau\source\repos\LibrarySystem\operations.cpp(138,1): error C2143: syntax error: missing ';' before '}'

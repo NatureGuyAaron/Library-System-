@@ -4,18 +4,21 @@
 #include <fstream>
 # include <map>
 
+#include <iterator>
 
+#include <vector>
+
+#include <algorithm>
 
 using namespace std;
 
+class Operations 
+{
+	private : string searchItem;
+	private : int checkInCount = 0, checkOutCount = 0;
+	vector <string> vec;
 
-class Operations {
-
-public: 
-
-	string searchItem;
-	int checkInCount = 0, checkOutCount = 0;
-
+	public : 
 	//set and get methods for the search item or the removed item
 	void setSearchItem(string i)
 	{
@@ -26,8 +29,6 @@ public:
 	{
 		return searchItem;
 	}
-
-
 
 	void searchItem(string search) const
 {
@@ -59,8 +60,6 @@ public:
 				{
 					cout << "Unable to open file.";
 				}
-
-
 		}
 		myFile.close();
 	
@@ -70,6 +69,7 @@ public:
 	void addItem(string id, string title, string type, bool availability = true) 
 	{	
 		ofstream myFile("items.txt");
+		vec.push_back(id);
 		myFile << "ID : \ " << id  << "Type : \ " << type << "Title : \ " << title << "Available : \ " << availability;
 		
 	}
@@ -101,13 +101,39 @@ public:
 	void checkOut(string firstName, string lastName, string accountID, string type, string itemID, string title)
 	{
 		ofstream myFile("checkOut.txt");
+		myFile << firstName << lastName << accountID << itemID << type << title;
 		checkOutCount++;
 	}
 
-	void report() // will check for popularity from the checkout file based on how many times the ID occurs in the file.
+	void report(string id) // will check for popularity from the checkout file based on how many times the ID occurs in the file.
 	{
-		ofstream myFile("checkout.txt"); 
+		ifstream myFile("checkout.txt");
+		string line;
+		int count = 0;
+		int position = 0;
 
+		for ( int i = 0; i < vec.size(); ++i) 
+		{
+			while (getline(myFile, line))
+			{
+			
+				if (line.find(vec[i]))
+				{
+						count++;
+				}
+				else if (!line.find(vec[i]))
+				{
+					cout << "\"" << id << "\" not found in the file";
+				}
+				else
+				{
+				cout << "Unable to open file.";
+				}
+			}
+		}
+
+		myFile.close();
+		cout << "Popularity : " << count;
 	}
 };
 
