@@ -7,13 +7,14 @@
 using namespace std;
 
 
-class search 
+class Operations {
 
-{
 public: 
 
 	string searchItem;
+	int checkInCount = 0, checkOutCount = 0;
 
+	//set and get methods for the search item or the removed item
 	void setSearchItem(string i)
 	{
 		searchItem = i;
@@ -44,9 +45,9 @@ void searchItem(string search)
 		while (getline(myFile, line))
 		{
 				lineNumber++;
-				if (line.find(search))
+				if (line.find(searchItem))
 				{
-					cout << "Found \"" << search << "\" at line " << lineNumber << line ;
+					cout << "Found \"" << searchItem << "\" at line " << lineNumber << line ;
 				}
 				else if (!found)
 				{
@@ -62,48 +63,57 @@ void searchItem(string search)
 		myFile.close();
 	
 } //end of function
-};//end of class
 
-class primaryOperations
-{
-	
-	void addItem(string i, string ti, string ty, bool a = true)
+	//Adds an item to inventory
+	void addItem(string id, string title, string type, bool availability = true) 
 	{	
 		ofstream myFile("items.txt");
-		item itemKey;
-		myFile << "ID : \ " << itemKey.getID() << "Type : \ " << itemKey.getType() << "Title : \ " << itemKey.getTitle() << "Available : \ " << itemKey.getAvailability();
+		item itemKey; //this has an error because of the input from jewel's file
+		myFile << "ID : \ " << id  << "Type : \ " << type << "Title : \ " << title << "Available : \ " << availability;
 		
 	}
 
-	void removeItem()
+	//removes item from inventory
+	void removeItem(string search)
 	{
-		ofstream myFile("items.txt");
+		string index;
+		string line;
+		ifstream myFile("items.txt");
+		cout << "Please enter the ID of the item you wish to remove.";
+		cin >> index;
+
+		while (getline(myFile, line))
+		{
+			string id(line.begin(), line.begin() + line.find(" "));
+			cout <<"Deleted line : \n" << line;
+		}
 	}
 
-	void checkIn()
+	//checks in an item ie. when someone brings back an item
+	void checkIn(string firstName, string lastName, string accountID, string type, string itemID, string title)
 	{
-		ofstream myFile("activity.txt");
+		ofstream myFile("checkIn.txt");
+		myFile << firstName << lastName << accountID << itemID << type << title ;
+		checkInCount++;
+	}
+	//checks out an item ie. when someone goes with an item
+	void checkOut(string firstName, string lastName, string accountID, string type, string itemID, string title)
+	{
+		ofstream myFile("checkOut.txt");
+		checkOutCount++;
 	}
 
-	void checkOut() 
+	void report() // will check for popularity from the checkout file based on how many times the ID occurs in the file.
 	{
-		ofstream myFile("activity.txt");
+		ofstream myFile("checkout.txt"); 
+
 	}
-
-	void report()
-	{
-		ofstream myFile("activity.txt");
-	}
-
-
-
 };
-
 
 int main()
 {
 	string item;
-	search searchKey;
+	search searchKey; //I need to fix the object reference
 	cout << "Please enter the string that you would like to search." ;
 	cin >> item ;
 	searchKey.searchItem(item);
